@@ -5,4 +5,4 @@ steps:
     
   # Docker push
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/test-project-randomtrees/test-project-docker:$SHORT_SHA', '.']
+    args: ['push', 'gcr.io/test-project-randomtrees/test-project-docker:$SHORT_SHA']
