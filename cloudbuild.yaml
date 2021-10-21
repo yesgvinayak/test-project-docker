@@ -6,3 +6,11 @@ steps:
   # Docker push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/test-project-randomtrees/test-project-docker:$SHORT_SHA']
+    
+  # Cloud run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'test-project-randomtrees', '--region=us-central1', '--platform=managed', '--image=gcr.io/test-project-randomtrees/test-project-docker:$SHORT_SHA']
+    
+    
+  
+  
